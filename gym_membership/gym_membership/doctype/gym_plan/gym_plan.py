@@ -19,6 +19,7 @@ class GymPlan(Document):
                 trainer_subscription.pop(idx)
 
             unique_trainer_subscription.append(item.gym_trainer)
+
     def get_total_amount(self) -> int:
         """ Returns the total ticket amount """
 
