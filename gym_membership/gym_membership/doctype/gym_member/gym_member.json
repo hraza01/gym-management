@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "autoname": "format:MEMBER-{####}",
+ "creation": "2023-07-12 16:26:35.721659",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "column_break_uuci",
+  "last_name",
+  "column_break_bqve",
+  "full_name",
+  "section_break_ktrd",
+  "gender",
+  "column_break_aigu",
+  "date_of_birth",
+  "column_break_osvp",
+  "age",
+  "section_break_cdhl",
+  "email",
+  "column_break_adqp",
+  "phone",
+  "section_break_zoay",
+  "address"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_uuci",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bqve",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ktrd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "column_break_aigu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "column_break_osvp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Read Only",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_cdhl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "column_break_adqp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "section_break_zoay",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-12 18:17:33.626720",
+ "modified_by": "Administrator",
+ "module": "Gym Membership",
+ "name": "Gym Member",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "full_name",
+ "track_changes": 1
+}

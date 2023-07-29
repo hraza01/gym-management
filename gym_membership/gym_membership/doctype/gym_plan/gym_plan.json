@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2023-07-12 17:44:58.038261",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "total_amount",
+  "section_break_scrj",
+  "plan_description",
+  "section_break_zlck",
+  "column_break_bdrl",
+  "plan_fee",
+  "column_break_yjjx",
+  "cadence",
+  "section_break_fmvw",
+  "trainer_subscription",
+  "currency"
+ ],
+ "fields": [
+  {
+   "fieldname": "plan_fee",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Plan Fee",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_description",
+   "fieldtype": "Long Text",
+   "label": "Description",
+   "max_height": "10rem"
+  },
+  {
+   "fieldname": "cadence",
+   "fieldtype": "Data",
+   "label": "Cadence"
+  },
+  {
+   "fieldname": "section_break_fmvw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_bdrl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "trainer_subscription",
+   "fieldtype": "Table",
+   "label": "Trainer Subscription",
+   "options": "Gym Trainer Subscription"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_scrj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_zlck",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_yjjx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "USD",
+   "fieldname": "currency",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Currency",
+   "options": "USD\nINR\nCAD"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-12 19:51:24.707452",
+ "modified_by": "Administrator",
+ "module": "Gym Membership",
+ "name": "Gym Plan",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

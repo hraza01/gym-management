@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "creation": "2023-07-12 17:29:34.879544",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_name",
+  "address",
+  "website",
+  "phone"
+ ],
+ "fields": [
+  {
+   "fieldname": "gym_name",
+   "fieldtype": "Data",
+   "label": "Gym Name"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website",
+   "options": "URL"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-07-12 17:32:37.070525",
+ "modified_by": "Administrator",
+ "module": "Gym Membership",
+ "name": "Gym Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

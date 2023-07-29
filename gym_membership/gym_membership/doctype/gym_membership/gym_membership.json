@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "autoname": "format:{gym_member}-{start_date}-{end_date}-{####}",
+ "creation": "2023-07-12 16:34:38.865667",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_member",
+  "gym_plan",
+  "start_date",
+  "end_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "label": "Gym Member",
+   "options": "Gym Member"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Membership",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "gym_plan",
+   "fieldtype": "Link",
+   "label": "Gym Plan",
+   "options": "Gym Plan"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-12 17:45:17.119041",
+ "modified_by": "Administrator",
+ "module": "Gym Membership",
+ "name": "Gym Membership",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

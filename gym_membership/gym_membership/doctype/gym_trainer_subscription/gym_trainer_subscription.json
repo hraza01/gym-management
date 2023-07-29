@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "creation": "2023-07-12 16:59:09.857897",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "plan_name",
+  "gym_trainer",
+  "start_date",
+  "end_date",
+  "trainer_fee",
+  "currency"
+ ],
+ "fields": [
+  {
+   "fieldname": "gym_trainer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gym Trainer",
+   "options": "Gym Trainer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trainer_fee",
+   "fieldtype": "Currency",
+   "label": "Trainer Fee",
+   "options": "currency"
+  },
+  {
+   "default": "USD",
+   "fieldname": "currency",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Currency",
+   "options": "USD\nINR\nCAD"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-12 19:51:37.368216",
+ "modified_by": "Administrator",
+ "module": "Gym Membership",
+ "name": "Gym Trainer Subscription",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

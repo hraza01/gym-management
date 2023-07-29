@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:WP-{gym_member_name}-{start_date}-{end_date}",
+ "creation": "2023-07-12 17:18:29.031493",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "start_date",
+  "column_break_hrxx",
+  "end_date",
+  "column_break_vulq",
+  "workout_type",
+  "section_break_qjxz",
+  "gym_member",
+  "calorie_intake_required",
+  "column_break_tosr",
+  "current_weight",
+  "desired_weight",
+  "section_break_xekn",
+  "workouts",
+  "gym_member_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "workout_type",
+   "fieldtype": "Data",
+   "label": "Workout Type"
+  },
+  {
+   "fieldname": "current_weight",
+   "fieldtype": "Float",
+   "label": "Current Weight"
+  },
+  {
+   "fieldname": "desired_weight",
+   "fieldtype": "Float",
+   "label": "Desired Weight"
+  },
+  {
+   "fieldname": "section_break_qjxz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_tosr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xekn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "calorie_intake_required",
+   "fieldtype": "Int",
+   "label": "Calorie Intake Required (Per Day)"
+  },
+  {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "label": "Gym Member",
+   "options": "Gym Member"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_hrxx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vulq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "workouts",
+   "fieldtype": "Table",
+   "label": "Workouts",
+   "options": "Gym Workout Plan Exercise"
+  },
+  {
+   "fetch_from": "gym_member.full_name",
+   "fieldname": "gym_member_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Gym Member Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-12 21:10:26.551248",
+ "modified_by": "Administrator",
+ "module": "Gym Membership",
+ "name": "Gym Workout Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
