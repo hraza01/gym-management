@@ -1,41 +1,31 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-07-31 00:21:15.219896",
+ "autoname": "prompt",
+ "creation": "2023-07-30 23:36:46.128340",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "gym_class",
-  "amended_from"
+  "workouts"
  ],
  "fields": [
   {
-   "fieldname": "gym_class",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Gym Class",
-   "options": "Gym Class",
+   "fieldname": "workouts",
+   "fieldtype": "Table",
+   "label": "Workouts",
+   "options": "Gym Workout Plan Exercise",
    "reqd": 1
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Gym Class Booking",
-   "print_hide": 1,
-   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2023-07-31 00:21:15.219896",
+ "modified": "2023-07-30 23:36:46.128340",
  "modified_by": "Administrator",
  "module": "Gym Membership",
- "name": "Gym Class Booking",
+ "name": "Gym Workout Plan Template",
+ "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,43 +1,58 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:WP-{gym_member_name}-{start_date}-{end_date}",
+ "autoname": "format:WP-{membership_no}-{start_date}-{end_date}",
  "creation": "2023-07-12 17:18:29.031493",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "column_break_endh",
+  "document_type",
+  "column_break_qbjr",
+  "amended_from",
+  "gym_member_details_section",
+  "member_id",
+  "column_break_jpgd",
+  "member_name",
+  "section_break_eand",
+  "membership_no",
+  "plan_name",
+  "column_break_dbbo",
+  "plan_start_date",
+  "plan_end_date",
+  "section_break_xlzj",
   "start_date",
   "column_break_hrxx",
   "end_date",
-  "column_break_vulq",
-  "workout_type",
   "section_break_qjxz",
-  "gym_member",
-  "calorie_intake_required",
-  "column_break_tosr",
+  "weight_unit",
+  "column_break_ncnz",
   "current_weight",
+  "column_break_tosr",
   "desired_weight",
+  "column_break_qfng",
+  "calorie_intake_required",
   "section_break_xekn",
-  "workouts",
-  "gym_member_name"
+  "workout_plan_template",
+  "column_break_tvme",
+  "trainer",
+  "section_break_xcfs",
+  "workouts"
  ],
  "fields": [
   {
-   "fieldname": "workout_type",
-   "fieldtype": "Data",
-   "label": "Workout Type"
-  },
-  {
    "fieldname": "current_weight",
    "fieldtype": "Float",
-   "label": "Current Weight"
+   "label": "Current Weight",
+   "reqd": 1
   },
   {
    "fieldname": "desired_weight",
    "fieldtype": "Float",
-   "label": "Desired Weight"
+   "label": "Desired Weight",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_qjxz",
@@ -57,47 +72,169 @@
    "label": "Calorie Intake Required (Per Day)"
   },
   {
-   "fieldname": "gym_member",
-   "fieldtype": "Link",
-   "label": "Gym Member",
-   "options": "Gym Member"
-  },
-  {
    "fieldname": "start_date",
    "fieldtype": "Date",
-   "label": "Start Date"
+   "label": "Start Date",
+   "reqd": 1
   },
   {
    "fieldname": "end_date",
    "fieldtype": "Date",
-   "label": "End Date"
+   "label": "End Date",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_hrxx",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_vulq",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "workouts",
    "fieldtype": "Table",
    "label": "Workouts",
-   "options": "Gym Workout Plan Exercise"
+   "options": "Gym Workout Plan Exercise",
+   "reqd": 1
   },
   {
-   "fetch_from": "gym_member.full_name",
-   "fieldname": "gym_member_name",
+   "fieldname": "section_break_xlzj",
+   "fieldtype": "Section Break",
+   "label": "Workout Plan"
+  },
+  {
+   "fieldname": "column_break_qfng",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gym_member_details_section",
+   "fieldtype": "Section Break",
+   "label": "Gym Member Information"
+  },
+  {
+   "fetch_from": "member_id.full_name",
+   "fieldname": "member_name",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Gym Member Name",
+   "in_list_view": 1,
+   "label": "Member Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "membership_no.gym_plan",
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "membership_no.start_date",
+   "fieldname": "plan_start_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan Start Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "membership_no.end_date",
+   "fieldname": "plan_end_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan End Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "membership_no",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Membership No",
+   "options": "document_type",
+   "reqd": 1
+  },
+  {
+   "fetch_from": ".gym_member",
+   "fieldname": "member_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member ID",
+   "options": "Gym Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jpgd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Kg",
+   "fieldname": "weight_unit",
+   "fieldtype": "Select",
+   "label": "Weight Unit",
+   "options": "Kg\nLbs",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ncnz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Workout Plan",
+   "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "column_break_endh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qbjr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tvme",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "workout_plan_template",
+   "fieldtype": "Link",
+   "label": "Workout Plan Template",
+   "options": "Gym Workout Plan Template"
+  },
+  {
+   "fieldname": "section_break_xcfs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "label": "Trainer",
+   "options": "Gym Trainer"
+  },
+  {
+   "fieldname": "section_break_eand",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_dbbo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Gym Membership",
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Document Type",
+   "options": "DocType"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-07-12 21:10:26.551248",
+ "modified": "2023-08-09 13:45:17.113239",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Workout Plan",
@@ -119,5 +256,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

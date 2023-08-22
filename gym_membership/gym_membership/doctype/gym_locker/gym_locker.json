@@ -9,8 +9,10 @@
  "engine": "InnoDB",
  "field_order": [
   "number",
-  "location",
-  "pass_code"
+  "column_break_bops",
+  "pass_code",
+  "column_break_eeje",
+  "location"
  ],
  "fields": [
   {
@@ -32,11 +34,19 @@
    "in_list_view": 1,
    "label": "Pass Code",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bops",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_eeje",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-12 18:37:17.685169",
+ "modified": "2023-07-30 20:40:34.338039",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Locker",

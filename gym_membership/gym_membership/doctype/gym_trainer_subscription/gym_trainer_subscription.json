@@ -6,12 +6,29 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "document_type",
+  "column_break_biqy",
+  "section_break_leew",
+  "column_break_fnhk",
+  "currency",
+  "column_break_qgab",
+  "amended_from",
+  "gym_member_information_section",
+  "member_id",
+  "column_break_aqmp",
+  "member_name",
+  "gym_membership_detail_section",
+  "membership_no",
   "plan_name",
+  "column_break_ilfm",
+  "plan_start_date",
+  "plan_end_date",
+  "section_break_wctn",
   "gym_trainer",
   "start_date",
-  "end_date",
+  "column_break_jdqe",
   "trainer_fee",
-  "currency"
+  "end_date"
  ],
  "fields": [
   {
@@ -36,17 +53,11 @@
    "reqd": 1
   },
   {
-   "fieldname": "plan_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Plan Name",
-   "reqd": 1
-  },
-  {
    "fieldname": "trainer_fee",
    "fieldtype": "Currency",
    "label": "Trainer Fee",
-   "options": "currency"
+   "options": "currency",
+   "reqd": 1
   },
   {
    "default": "USD",
@@ -55,18 +66,138 @@
    "hidden": 1,
    "label": "Currency",
    "options": "USD\nINR\nCAD"
+  },
+  {
+   "fieldname": "column_break_jdqe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gym_membership_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Gym Membership Detail"
+  },
+  {
+   "fieldname": "membership_no",
+   "fieldtype": "Dynamic Link",
+   "label": "Membership No",
+   "options": "document_type",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "membership_no.gym_member",
+   "fieldname": "member_id",
+   "fieldtype": "Link",
+   "label": "Member ID",
+   "options": "Gym Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_wctn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Trainer Subscription",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "membership_no.start_date",
+   "fieldname": "plan_start_date",
+   "fieldtype": "Data",
+   "label": "Plan Start Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "membership_no.end_date",
+   "fieldname": "plan_end_date",
+   "fieldtype": "Data",
+   "label": "Plan End Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ilfm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fnhk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qgab",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "membership_no.gym_plan",
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "label": "Plan Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "member_id.full_name",
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "label": "Member Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Gym Membership",
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Document Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_biqy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_leew",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gym_member_information_section",
+   "fieldtype": "Section Break",
+   "label": "Gym Member Information"
+  },
+  {
+   "fieldname": "column_break_aqmp",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
- "istable": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-07-12 19:51:37.368216",
+ "modified": "2023-08-09 13:48:16.802219",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Trainer Subscription",
  "owner": "Administrator",
- "permissions": [],
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

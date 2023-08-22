@@ -1,24 +1,38 @@
 {
  "actions": [],
- "autoname": "format:{gym_member}-{start_date}-{end_date}-{####}",
+ "autoname": "format:MEM-{gym_member}-{start_date}-{end_date}-{##}",
  "creation": "2023-07-12 16:34:38.865667",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "column_break_mljn",
+  "column_break_oicb",
+  "amended_from",
+  "gym_member_details_section",
   "gym_member",
+  "column_break_sdlf",
+  "full_name",
+  "column_break_cqil",
+  "email",
+  "column_break_oqkl",
+  "phone",
+  "section_break_wzzj",
   "gym_plan",
+  "plan_fee",
+  "column_break_mvvi",
   "start_date",
-  "end_date",
-  "amended_from"
+  "end_date"
  ],
  "fields": [
   {
    "fieldname": "gym_member",
    "fieldtype": "Link",
-   "label": "Gym Member",
-   "options": "Gym Member"
+   "in_list_view": 1,
+   "label": "Member ID",
+   "options": "Gym Member",
+   "reqd": 1
   },
   {
    "fieldname": "start_date",
@@ -42,14 +56,82 @@
   {
    "fieldname": "gym_plan",
    "fieldtype": "Link",
-   "label": "Gym Plan",
+   "label": "Plan Name",
    "options": "Gym Plan"
+  },
+  {
+   "fieldname": "column_break_sdlf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_wzzj",
+   "fieldtype": "Section Break",
+   "label": "Gym Plan"
+  },
+  {
+   "fieldname": "column_break_mvvi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mljn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_oicb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gym_member_details_section",
+   "fieldtype": "Section Break",
+   "label": "Gym Member Details"
+  },
+  {
+   "fetch_from": "gym_member.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cqil",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "gym_member.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_oqkl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "gym_member.phone",
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phone",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "gym_plan.plan_fee",
+   "fieldname": "plan_fee",
+   "fieldtype": "Data",
+   "label": "Plan Fee",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-12 17:45:17.119041",
+ "modified": "2023-08-08 12:05:14.106682",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Membership",

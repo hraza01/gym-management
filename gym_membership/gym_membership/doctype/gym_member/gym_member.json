@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "format:MEMBER-{####}",
+ "autoname": "format:M-{####}",
  "creation": "2023-07-12 16:26:35.721659",
  "default_view": "List",
  "doctype": "DocType",
@@ -87,7 +87,8 @@
   {
    "fieldname": "email",
    "fieldtype": "Data",
-   "label": "Email"
+   "label": "Email",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_adqp",
@@ -96,7 +97,8 @@
   {
    "fieldname": "phone",
    "fieldtype": "Data",
-   "label": "Phone"
+   "label": "Phone",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_zoay",
@@ -110,7 +112,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-12 18:17:33.626720",
+ "modified": "2023-07-30 21:36:36.576043",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Member",
@@ -130,10 +132,8 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "full_name",
  "track_changes": 1
 }

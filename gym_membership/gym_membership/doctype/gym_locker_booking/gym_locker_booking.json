@@ -1,45 +1,46 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:LB-{####}",
+ "autoname": "format:LB-{gym_member}-{start_time}-{end-time}",
  "creation": "2023-07-12 17:02:58.757759",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "locker",
-  "column_break_nwyz",
-  "gym_member",
-  "column_break_ztne",
-  "amended_from",
   "section_break_rhnf",
-  "start_date",
+  "start_time",
+  "column_break_xhmz",
+  "end_time",
   "column_break_rttt",
-  "end_date"
+  "gym_member",
+  "section_break_ijjr",
+  "locker",
+  "column_break_yyyn",
+  "pass_code",
+  "column_break_nwyz",
+  "locker_location",
+  "section_break_qssb",
+  "column_break_isow",
+  "column_break_kjwp",
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "locker",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Locker",
-   "options": "Gym Locker"
+   "options": "Gym Locker",
+   "reqd": 1
   },
   {
    "fieldname": "gym_member",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Gym Member",
-   "options": "Gym Member"
-  },
-  {
-   "fieldname": "start_date",
-   "fieldtype": "Datetime",
-   "label": "Start Date"
-  },
-  {
-   "fieldname": "end_date",
-   "fieldtype": "Datetime",
-   "label": "End Date"
+   "options": "Gym Member",
+   "reqd": 1
   },
   {
    "fieldname": "amended_from",
@@ -55,22 +56,74 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_ztne",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "section_break_rhnf",
    "fieldtype": "Section Break"
   },
   {
    "fieldname": "column_break_rttt",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Booking Start",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xhmz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Booking End",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ijjr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_yyyn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "locker.pass_code",
+   "fieldname": "pass_code",
+   "fieldtype": "Link",
+   "label": "Pass Code",
+   "options": "Gym Locker",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "locker.location",
+   "fieldname": "locker_location",
+   "fieldtype": "Link",
+   "label": "Locker Location",
+   "options": "Gym Locker",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_qssb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_isow",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kjwp",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-12 20:11:04.850375",
+ "modified": "2023-07-30 20:51:47.454802",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Locker Booking",
