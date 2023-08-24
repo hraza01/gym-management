@@ -1,19 +1,31 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:LB-{gym_member}-{start_time}-{end-time}",
+ "autoname": "format:LB-{member_id}-{start_time}",
  "creation": "2023-07-12 17:02:58.757759",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "membership_information_section",
+  "gym_membership",
+  "column_break_ffoh",
+  "member_id",
+  "section_break_ofrf",
+  "member_name",
+  "column_break_sfvm",
+  "member_email",
+  "section_break_uffy",
+  "plan_start_date",
+  "column_break_rxtj",
+  "plan_end_date",
   "section_break_rhnf",
   "start_time",
   "column_break_xhmz",
-  "end_time",
+  "duration",
   "column_break_rttt",
-  "gym_member",
+  "end_time",
   "section_break_ijjr",
   "locker",
   "column_break_yyyn",
@@ -35,14 +47,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "gym_member",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Gym Member",
-   "options": "Gym Member",
-   "reqd": 1
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -57,7 +61,8 @@
   },
   {
    "fieldname": "section_break_rhnf",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Booking Information"
   },
   {
    "fieldname": "column_break_rttt",
@@ -75,13 +80,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "end_time",
-   "fieldtype": "Datetime",
-   "in_list_view": 1,
-   "label": "Booking End",
-   "reqd": 1
-  },
-  {
    "fieldname": "section_break_ijjr",
    "fieldtype": "Section Break"
   },
@@ -92,18 +90,16 @@
   {
    "fetch_from": "locker.pass_code",
    "fieldname": "pass_code",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Pass Code",
-   "options": "Gym Locker",
    "read_only": 1,
    "reqd": 1
   },
   {
    "fetch_from": "locker.location",
    "fieldname": "locker_location",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Locker Location",
-   "options": "Gym Locker",
    "read_only": 1,
    "reqd": 1
   },
@@ -118,12 +114,104 @@
   {
    "fieldname": "column_break_kjwp",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Duration (minutes)",
+   "options": "60\n120",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ffoh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "gym_membership.full_name",
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Member Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "gym_membership",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Membership No",
+   "options": "Gym Membership",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "gym_membership.start_date",
+   "fieldname": "plan_start_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan Start Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "gym_membership.end_date",
+   "fieldname": "plan_end_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan End Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uffy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_rxtj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "membership_information_section",
+   "fieldtype": "Section Break",
+   "label": "Membership Information"
+  },
+  {
+   "fieldname": "section_break_ofrf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_sfvm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "gym_membership.email",
+   "fieldname": "member_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Member Email",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "label": "Booking End",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "gym_membership.gym_member",
+   "fieldname": "member_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Member ID",
+   "read_only": 1,
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-30 20:51:47.454802",
+ "modified": "2023-08-23 13:32:28.653055",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Locker Booking",
