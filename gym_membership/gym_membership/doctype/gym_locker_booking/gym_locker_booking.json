@@ -9,9 +9,10 @@
  "engine": "InnoDB",
  "field_order": [
   "membership_information_section",
-  "gym_membership",
   "column_break_ffoh",
   "member_id",
+  "column_break_rhxs",
+  "membership_no",
   "section_break_ofrf",
   "member_name",
   "column_break_sfvm",
@@ -44,6 +45,7 @@
    "in_list_view": 1,
    "label": "Locker",
    "options": "Gym Locker",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -128,7 +130,7 @@
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "gym_membership.full_name",
+   "fetch_from": "member_id.full_name",
    "fieldname": "member_name",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -137,15 +139,7 @@
    "reqd": 1
   },
   {
-   "fieldname": "gym_membership",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Membership No",
-   "options": "Gym Membership",
-   "reqd": 1
-  },
-  {
-   "fetch_from": "gym_membership.start_date",
+   "fetch_from": "membership_no.start_date",
    "fieldname": "plan_start_date",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -154,7 +148,7 @@
    "reqd": 1
   },
   {
-   "fetch_from": "gym_membership.end_date",
+   "fetch_from": "membership_no.end_date",
    "fieldname": "plan_end_date",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -184,7 +178,7 @@
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "gym_membership.email",
+   "fetch_from": "member_id.email",
    "fieldname": "member_email",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -199,11 +193,24 @@
    "read_only": 1
   },
   {
-   "fetch_from": "gym_membership.gym_member",
+   "fetch_from": ".gym_member",
    "fieldname": "member_id",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Member ID",
+   "options": "Gym Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rhxs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "membership_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Membership No",
+   "options": "Gym Membership",
    "read_only": 1,
    "reqd": 1
   }
@@ -211,7 +218,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-23 13:32:28.653055",
+ "modified": "2023-08-24 21:47:32.476195",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Locker Booking",

@@ -3,8 +3,6 @@
 
 import frappe
 from frappe.model.document import Document
-from frappe.query_builder import Query, AliasedQuery
-
 import datetime as dt
 
 
