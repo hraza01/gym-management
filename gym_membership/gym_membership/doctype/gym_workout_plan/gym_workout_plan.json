@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "column_break_endh",
+  "document_type",
   "column_break_qbjr",
   "amended_from",
   "gym_member_details_section",
@@ -200,9 +201,9 @@
   },
   {
    "fieldname": "workout_plan_template",
-   "fieldtype": "Link",
+   "fieldtype": "Dynamic Link",
    "label": "Workout Plan Template",
-   "options": "Gym Workout Plan Template"
+   "options": "document_type"
   },
   {
    "fieldname": "section_break_xcfs",
@@ -221,12 +222,21 @@
   {
    "fieldname": "column_break_dbbo",
    "fieldtype": "Column Break"
+  },
+  {
+   "default": "Gym Workout Plan Template",
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Document Type",
+   "options": "DocType",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-24 21:59:45.788286",
+ "modified": "2023-08-25 11:21:01.723507",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Workout Plan",
