@@ -9,7 +9,8 @@
   "gym_name",
   "address",
   "website",
-  "phone"
+  "phone",
+  "hours"
  ],
  "fields": [
   {
@@ -32,12 +33,17 @@
    "fieldname": "phone",
    "fieldtype": "Data",
    "label": "Phone"
+  },
+  {
+   "fieldname": "hours",
+   "fieldtype": "Data",
+   "label": "Hours"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-07-12 17:32:37.070525",
+ "modified": "2023-08-26 13:05:03.079501",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Settings",
