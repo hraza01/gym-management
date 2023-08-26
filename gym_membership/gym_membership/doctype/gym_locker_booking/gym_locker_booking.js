@@ -5,7 +5,7 @@ frappe.ui.form.on("Gym Locker Booking", {
 	refresh(frm) {
     frm.add_custom_button("Fetch Membership", () => {
       frappe.call({
-        method: 'gym_membership.gym_membership.utils.helpers.get_membership_detail',
+        method: 'gym_membership.gym_membership.doctype.gym_membership.gym_membership.get_membership_detail',
         args: {
           member_id: frm.doc.member_id,
         }

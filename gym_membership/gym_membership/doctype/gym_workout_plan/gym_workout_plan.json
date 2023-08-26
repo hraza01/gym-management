@@ -22,10 +22,6 @@
   "column_break_dbbo",
   "plan_start_date",
   "plan_end_date",
-  "section_break_xlzj",
-  "start_date",
-  "column_break_hrxx",
-  "end_date",
   "section_break_qjxz",
   "weight_unit",
   "column_break_ncnz",
@@ -34,12 +30,17 @@
   "desired_weight",
   "column_break_qfng",
   "calorie_intake_required",
-  "section_break_xekn",
+  "section_break_xlzj",
+  "start_date",
   "workout_plan_template",
-  "column_break_tvme",
-  "trainer",
+  "column_break_hrxx",
+  "end_date",
   "section_break_xcfs",
-  "workouts"
+  "workouts",
+  "section_break_fono",
+  "trainer",
+  "column_break_oqfl",
+  "class_id"
  ],
  "fields": [
   {
@@ -61,10 +62,6 @@
   {
    "fieldname": "column_break_tosr",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_xekn",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "calorie_intake_required",
@@ -196,10 +193,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_tvme",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "workout_plan_template",
    "fieldtype": "Dynamic Link",
    "label": "Workout Plan Template",
@@ -231,12 +224,28 @@
    "label": "Document Type",
    "options": "DocType",
    "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_fono",
+   "fieldtype": "Section Break",
+   "label": "Trainer & Class Information"
+  },
+  {
+   "fieldname": "column_break_oqfl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "class_id",
+   "fieldtype": "Link",
+   "label": "Class ID",
+   "options": "Gym Class Registration"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-25 11:21:01.723507",
+ "modified": "2023-08-26 13:03:17.971597",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Workout Plan",
