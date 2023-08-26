@@ -2,8 +2,12 @@
 # For license information, please see license.txt
 
 # import frappe
-from frappe.model.document import Document
+from frappe.website.website_generator import WebsiteGenerator
+import re
 
 
-class GymWorkoutPlanTemplate(Document):
-	pass
+class GymWorkoutPlanTemplate(WebsiteGenerator):
+    def before_save(self):
+        if not self.route:
+            route = re.sub(r'[^A-Za-z0-9-]', '-', self.name)
+            self.route = f"workout-plans/{route.lower()}"

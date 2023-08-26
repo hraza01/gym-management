@@ -8,6 +8,11 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "route",
+  "is_published",
+  "section_break_yflc",
+  "description",
+  "section_break_napc",
   "workouts"
  ],
  "fields": [
@@ -17,11 +22,38 @@
    "label": "Workouts",
    "options": "Gym Workout Plan Exercise",
    "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Route"
+  },
+  {
+   "fieldname": "section_break_yflc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_napc",
+   "fieldtype": "Section Break"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
  "links": [],
- "modified": "2023-07-30 23:36:46.128340",
+ "modified": "2023-08-26 14:46:28.960558",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Workout Plan Template",
@@ -41,6 +73,7 @@
    "write": 1
   }
  ],
+ "route": "workout-plans",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

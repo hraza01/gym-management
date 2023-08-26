@@ -1,0 +1,35 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+  <p>Workout Plans</p>
+  <h1>{{ title }}</h1>
+  <p>{{ doc.description }}</p>
+
+  {% block exercises %}
+    <table class="table table-striped table-hover">
+      <thead>
+      <tr>
+        <th scope="col">Exercise Type</th>
+        <th scope="col">Exercise Name</th>
+        <th scope="col">Calorie Burn Rate (per hour)</th>
+        <th scope="col">Duration (mins)</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for exercise in doc.workouts %}
+        <tr>
+          <th scope="row">{{ exercise.exercise_type }}</th>
+          <td>{{ exercise.exercise_name }}</td>
+          <td>{{ exercise.calorie_burn_rate }}</td>
+          <td>{{ exercise.duration_minutes }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% endblock %}
+
+  <p>Total Duration: </p>
+  <p>Total Burn: </p>
+{% endblock %}
+
+<!-- this is a sample default web page template -->
