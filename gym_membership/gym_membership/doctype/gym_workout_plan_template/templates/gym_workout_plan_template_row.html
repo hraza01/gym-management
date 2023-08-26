@@ -1,10 +1,12 @@
-<div class="p-4">
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">{{ doc.get_title() or doc.name }}</h5>
-      <p class="card-text">{{ doc.description }}</p>
-      <a href="{{ doc.route }}" class="btn btn-primary">Learn More</a>
+{% if doc.is_published %}
+  <div class="p-4">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{ doc.get_title() or doc.name }}</h5>
+        <p class="card-text">{{ doc.description }}</p>
+        <a href="{{ doc.route }}" class="btn btn-primary">Learn More</a>
+      </div>
     </div>
   </div>
-</div>
+{% endif %}
 <!-- this is a sample default list template -->
