@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:CL-{class_type}-{start_time}-{duration}-{#}",
+ "autoname": "hash",
  "creation": "2023-07-31 00:21:15.219896",
  "default_view": "List",
  "doctype": "DocType",
@@ -20,7 +20,11 @@
   "column_break_xnuh",
   "start_time",
   "column_break_johz",
-  "end_time"
+  "end_time",
+  "section_break_bhkm",
+  "route",
+  "column_break_ksyf",
+  "column_break_mjdd"
  ],
  "fields": [
   {
@@ -35,6 +39,7 @@
   {
    "fieldname": "instructor",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Instructor",
    "options": "Gym Trainer",
    "reqd": 1
@@ -46,11 +51,13 @@
   {
    "fieldname": "start_time",
    "fieldtype": "Datetime",
+   "in_list_view": 1,
    "label": "Start Time"
   },
   {
    "fieldname": "duration",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Duration",
    "options": "60\n120",
    "reqd": 1
@@ -82,6 +89,7 @@
   {
    "fieldname": "end_time",
    "fieldtype": "Datetime",
+   "in_list_view": 1,
    "label": "End Time",
    "read_only": 1
   },
@@ -92,15 +100,34 @@
    "label": "Class Type",
    "options": "Dance\nFitness\nBoxing\nPilates\nHigh Intensity",
    "reqd": 1
+  },
+  {
+   "fieldname": "section_break_bhkm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ksyf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mjdd",
+   "fieldtype": "Column Break"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-26 12:08:48.303772",
+ "modified": "2023-08-26 17:43:03.377249",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Class",
- "naming_rule": "Expression",
+ "naming_rule": "Random",
  "owner": "Administrator",
  "permissions": [
   {
@@ -116,8 +143,11 @@
    "write": 1
   }
  ],
+ "route": "class",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "class_type",
  "track_changes": 1
 }

@@ -56,6 +56,7 @@
   {
    "fieldname": "gym_plan",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Plan Name",
    "options": "Gym Plan"
   },
@@ -131,7 +132,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-24 21:06:32.187659",
+ "modified": "2023-08-26 17:45:15.579343",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Membership",
@@ -151,8 +152,10 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "gym_member",
  "track_changes": 1
 }
