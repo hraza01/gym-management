@@ -3,6 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
+from gym_membership.utils.helpers import get_end_time
 import datetime as dt
 
 
@@ -10,12 +11,6 @@ class GymLockerBooking(Document):
     def before_save(self):
         end_time = get_end_time(self.start_time, self.duration)
         self.end_time = str(end_time)
-
-
-def get_end_time(start_time, duration):
-    return dt.datetime.strptime(start_time, "%Y-%m-%d %H:%M:%S") + dt.timedelta(
-        minutes=int(duration)
-    )
 
 
 @frappe.whitelist()
