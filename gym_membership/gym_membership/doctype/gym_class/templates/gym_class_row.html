@@ -1,0 +1,16 @@
+  {% set count = frappe.db.count('Gym Class Registration', filters={'gym_class_id': doc.name}) %}
+
+<div class="p-4">
+  <div class="card" style="width: 20rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ doc.class_type }}</h5>
+      <p class="card-text">Instructor: {{ frappe.db.get_value('Gym Trainer', doc.instructor, 'full_name') }}</p>
+      <p class="card-text">{{ doc.start_time.strftime('%d %b, %Y | %H:%M') }} | {{ doc.duration }} Minutes</p>
+      <div class="flex align-items-center">
+        <p class="m-0 mr-4">Currently Enrolled: {{ count }}</p>
+        <a href="/new-class-registration/new?gym_class_id={{doc.name}}" class="btn btn-primary ml-auto">Enroll</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- this is a sample default list template -->

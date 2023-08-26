@@ -132,7 +132,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-26 17:45:15.579343",
+ "modified": "2023-08-26 18:22:23.937615",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Membership",
@@ -152,10 +152,8 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "gym_member",
  "track_changes": 1
 }
