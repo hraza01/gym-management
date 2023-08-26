@@ -1,0 +1,215 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-08-26 11:44:49.076788",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "column_break_qlrl",
+  "amended_from",
+  "column_break_vbsi",
+  "status",
+  "section_break_yncz",
+  "gym_class_id",
+  "class_start_time",
+  "column_break_meud",
+  "class_type",
+  "class_duration",
+  "column_break_vgnd",
+  "instructor",
+  "class_end_time",
+  "section_break_gpwr",
+  "member_id",
+  "column_break_yrob",
+  "member_name",
+  "section_break_piph",
+  "membership_no",
+  "plan_name",
+  "column_break_xfgx",
+  "plan_start_date",
+  "plan_end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "gym_class_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gym Class ID",
+   "options": "Gym Class",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "gym_class_id.class_type",
+   "fieldname": "class_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Class Type",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Class Registration",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "gym_class_id.instructor",
+   "fieldname": "instructor",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Instructor",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "gym_class_id.start_time",
+   "fieldname": "class_start_time",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Class Start Time",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "gym_class_id.duration",
+   "fieldname": "class_duration",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Class Duration",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "gym_class_id.end_time",
+   "fieldname": "class_end_time",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Class End Time",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_meud",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vgnd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_yncz",
+   "fieldtype": "Section Break",
+   "label": "Class Information"
+  },
+  {
+   "fieldname": "column_break_qlrl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vbsi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_gpwr",
+   "fieldtype": "Section Break",
+   "label": "Member Information"
+  },
+  {
+   "fieldname": "member_id",
+   "fieldtype": "Link",
+   "label": "Member ID",
+   "options": "Gym Member",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "member_id.full_name",
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "label": "Member Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yrob",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_piph",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "membership_no",
+   "fieldtype": "Link",
+   "label": "Membership No",
+   "options": "Gym Membership",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "membership_no.gym_plan",
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "label": "Plan Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xfgx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "membership_no.start_date",
+   "fieldname": "plan_start_date",
+   "fieldtype": "Data",
+   "label": "Plan Start Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "membership_no.end_date",
+   "fieldname": "plan_end_date",
+   "fieldtype": "Data",
+   "label": "Plan End Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Registration Status",
+   "options": "Booked\nConfirmed",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-08-26 12:31:08.523460",
+ "modified_by": "Administrator",
+ "module": "Gym Membership",
+ "name": "Gym Class Registration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

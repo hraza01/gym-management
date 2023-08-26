@@ -1,53 +1,102 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:GC-{class_name}-{class_date}-{class_time}",
- "creation": "2023-07-12 17:05:16.602263",
+ "autoname": "format:CL-{class_type}-{start_time}-{duration}-{#}",
+ "creation": "2023-07-31 00:21:15.219896",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "class_name",
-  "column_break_tzbf",
-  "class_date",
-  "column_break_glkl",
-  "class_time"
+  "column_break_ygar",
+  "column_break_yiaj",
+  "amended_from",
+  "section_break_gdyb",
+  "class_type",
+  "column_break_lmui",
+  "instructor",
+  "section_break_luek",
+  "duration",
+  "column_break_xnuh",
+  "start_time",
+  "column_break_johz",
+  "end_time"
  ],
  "fields": [
   {
-   "fieldname": "class_date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Class Date",
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Class",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "instructor",
+   "fieldtype": "Link",
+   "label": "Instructor",
+   "options": "Gym Trainer",
    "reqd": 1
   },
   {
-   "fieldname": "class_time",
-   "fieldtype": "Time",
-   "in_list_view": 1,
-   "label": "Class Time",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_glkl",
+   "fieldname": "column_break_lmui",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "class_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Class Name",
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Select",
+   "label": "Duration",
+   "options": "60\n120",
    "reqd": 1
   },
   {
-   "fieldname": "column_break_tzbf",
+   "fieldname": "column_break_ygar",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yiaj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_gdyb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_luek",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_xnuh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_johz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "label": "End Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "class_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Class Type",
+   "options": "Dance\nFitness\nBoxing\nPilates\nHigh Intensity",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-31 00:15:41.026334",
+ "modified": "2023-08-26 12:08:48.303772",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Class",
@@ -69,5 +118,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
