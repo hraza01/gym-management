@@ -28,8 +28,8 @@
     </table>
   {% endblock %}
 
-  <p>Total Duration: </p>
-  <p>Total Burn: </p>
+  <p>Total Duration: {{ doc.total_duration|round|int }}</p>
+  <p>Total Burn: {{ doc.total_burn|round|int }}</p>
 {% endblock %}
 
 <!-- this is a sample default web page template -->
