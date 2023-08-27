@@ -1,4 +1,4 @@
-  {% set count = frappe.db.count('Gym Class Registration', filters={'gym_class_id': doc.name}) %}
+{% set count = frappe.db.count('Gym Class Registration', filters={'gym_class_id': doc.name}) %}
 
 <div class="p-4">
   <div class="card" style="width: 20rem;">
