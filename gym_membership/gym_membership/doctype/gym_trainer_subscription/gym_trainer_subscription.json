@@ -11,6 +11,10 @@
   "currency",
   "column_break_qgab",
   "amended_from",
+  "section_break_vflv",
+  "column_break_rshg",
+  "column_break_srzs",
+  "status",
   "gym_member_information_section",
   "member_id",
   "column_break_aqmp",
@@ -35,7 +39,8 @@
    "in_list_view": 1,
    "label": "Gym Trainer",
    "options": "Gym Trainer",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "start_date",
@@ -55,6 +60,7 @@
    "fieldtype": "Currency",
    "label": "Trainer Fee",
    "options": "currency",
+   "precision": "2",
    "reqd": 1
   },
   {
@@ -88,7 +94,8 @@
    "fieldtype": "Link",
    "label": "Member ID",
    "options": "Gym Member",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "section_break_wctn",
@@ -159,12 +166,32 @@
   {
    "fieldname": "column_break_aqmp",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vflv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_rshg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_srzs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Scheduled\nIn Progress\nCompleted",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-24 21:03:24.651952",
+ "modified": "2023-08-28 10:33:09.677772",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Trainer Subscription",

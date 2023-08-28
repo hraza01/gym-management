@@ -8,6 +8,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "currency",
+  "column_break_nfyo",
   "section_break_zlck",
   "column_break_bdrl",
   "plan_fee",
@@ -23,6 +25,7 @@
    "in_list_view": 1,
    "label": "Plan Fee",
    "options": "currency",
+   "precision": "2",
    "reqd": 1
   },
   {
@@ -51,6 +54,18 @@
    "fieldname": "plan_type",
    "fieldtype": "Data",
    "label": "Plan Type"
+  },
+  {
+   "default": "USD",
+   "fieldname": "currency",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Currency",
+   "options": "USD\nINR\nCAD"
+  },
+  {
+   "fieldname": "column_break_nfyo",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -60,7 +75,7 @@
    "link_fieldname": "gym_plan"
   }
  ],
- "modified": "2023-08-27 13:20:29.070806",
+ "modified": "2023-08-28 10:33:04.407094",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Plan",
