@@ -8,8 +8,10 @@
  "field_order": [
   "gym_name",
   "address",
+  "column_break_grwd",
   "website",
   "phone",
+  "column_break_eosp",
   "hours"
  ],
  "fields": [
@@ -38,12 +40,20 @@
    "fieldname": "hours",
    "fieldtype": "Data",
    "label": "Hours"
+  },
+  {
+   "fieldname": "column_break_grwd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_eosp",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-08-26 13:05:03.079501",
+ "modified": "2023-08-28 21:45:33.562666",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Settings",
@@ -56,6 +66,16 @@
    "print": 1,
    "read": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Gym Admin",
    "share": 1,
    "write": 1
   }
