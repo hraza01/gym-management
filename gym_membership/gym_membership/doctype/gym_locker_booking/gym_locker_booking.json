@@ -199,7 +199,8 @@
    "in_list_view": 1,
    "label": "Member ID",
    "options": "Gym Member",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "column_break_rhxs",
@@ -218,7 +219,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-28 21:53:21.001359",
+ "modified": "2023-08-29 14:42:00.496987",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Locker Booking",
@@ -253,10 +254,12 @@
    "create": 1,
    "email": 1,
    "export": 1,
+   "if_owner": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "Gym Member",
+   "select": 1,
    "share": 1,
    "write": 1
   }
