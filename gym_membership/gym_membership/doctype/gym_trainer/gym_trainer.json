@@ -12,9 +12,7 @@
   "column_break_xqlx",
   "last_name",
   "column_break_ljks",
-  "full_name",
-  "section_break_jqfq",
-  "average_rating"
+  "full_name"
  ],
  "fields": [
   {
@@ -38,21 +36,12 @@
    "unique": 1
   },
   {
-   "fieldname": "average_rating",
-   "fieldtype": "Rating",
-   "label": "Average Rating"
-  },
-  {
    "fieldname": "column_break_xqlx",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "column_break_ljks",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_jqfq",
-   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -66,7 +55,7 @@
    "link_fieldname": "trainer"
   }
  ],
- "modified": "2023-08-28 21:43:05.945022",
+ "modified": "2023-08-29 21:32:26.058400",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Trainer",
@@ -96,6 +85,16 @@
    "role": "Gym Admin",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Member",
+   "select": 1,
+   "share": 1
   }
  ],
  "show_title_field_in_link": 1,

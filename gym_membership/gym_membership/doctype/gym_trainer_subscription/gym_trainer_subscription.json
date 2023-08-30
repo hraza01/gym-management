@@ -28,6 +28,7 @@
   "section_break_wctn",
   "gym_trainer",
   "start_date",
+  "trainer_rating",
   "column_break_jdqe",
   "trainer_fee",
   "end_date"
@@ -60,8 +61,7 @@
    "fieldtype": "Currency",
    "label": "Trainer Fee",
    "options": "currency",
-   "precision": "2",
-   "reqd": 1
+   "precision": "2"
   },
   {
    "default": "USD",
@@ -180,18 +180,23 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "Scheduled",
+   "default": "To Review",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Scheduled\nIn Progress\nCompleted",
+   "options": "To Review\nScheduled\nIn Progress\nCompleted",
    "reqd": 1
+  },
+  {
+   "fieldname": "trainer_rating",
+   "fieldtype": "Rating",
+   "label": "Trainer Rating"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-28 21:53:45.657932",
+ "modified": "2023-08-29 21:19:58.440532",
  "modified_by": "Administrator",
  "module": "Gym Membership",
  "name": "Gym Trainer Subscription",
@@ -237,6 +242,27 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
+ "states": [
+  {
+   "color": "Pink",
+   "title": "To Review"
+  },
+  {
+   "color": "Light Blue",
+   "title": "Scheduled"
+  },
+  {
+   "color": "Blue",
+   "title": "In Progress"
+  },
+  {
+   "color": "Green",
+   "title": "Completed"
+  },
+  {
+   "color": "Red",
+   "title": "Cancelled"
+  }
+ ],
  "track_changes": 1
 }
