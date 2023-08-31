@@ -7,7 +7,18 @@ from frappe.query_builder import Order, Criterion
 
 
 class GymMembership(Document):
-    pass
+
+    def before_save(self):
+        exists = frappe.db.exists(
+            'Gym Membership',
+            {
+                'gym_member': self.gym_member,
+                'docstatus': 1,
+                'end_date': ('>', self.end_date),
+            },
+        )
+        if exists:
+            frappe.throw('There is an active membership for this member')
 
 
 @frappe.whitelist()
