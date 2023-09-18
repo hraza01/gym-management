@@ -4,15 +4,15 @@ include *.json
 include *.md
 include *.py
 include *.txt
-recursive-include gym_membership *.css
-recursive-include gym_membership *.csv
-recursive-include gym_membership *.html
-recursive-include gym_membership *.ico
-recursive-include gym_membership *.js
-recursive-include gym_membership *.json
-recursive-include gym_membership *.md
-recursive-include gym_membership *.png
-recursive-include gym_membership *.py
-recursive-include gym_membership *.svg
-recursive-include gym_membership *.txt
-recursive-exclude gym_membership *.pyc
+recursive-include gym_management *.css
+recursive-include gym_management *.csv
+recursive-include gym_management *.html
+recursive-include gym_management *.ico
+recursive-include gym_management *.js
+recursive-include gym_management *.json
+recursive-include gym_management *.md
+recursive-include gym_management *.png
+recursive-include gym_management *.py
+recursive-include gym_management *.svg
+recursive-include gym_management *.txt
+recursive-exclude gym_management *.pyc
