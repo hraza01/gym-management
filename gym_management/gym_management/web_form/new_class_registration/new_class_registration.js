@@ -1,7 +1,7 @@
 frappe.ready(function () {
   frappe.web_form.on('member_id', (field, value) => {
     frappe.call({
-      method: 'gym_membership.gym_membership.doctype.gym_membership.gym_membership.get_membership_detail',
+      method: 'gym_management.gym_management.doctype.gym_management.gym_management.get_membership_detail',
       args: {
         member_id: value,
       }

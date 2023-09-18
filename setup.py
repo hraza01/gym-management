@@ -3,13 +3,13 @@ from setuptools import setup, find_packages
 with open("requirements.txt") as f:
     install_requires = f.read().strip().split("\n")
 
-# get version from __version__ variable in gym_membership/__init__.py
-from gym_membership import __version__ as version
+# get version from __version__ variable in gym_management/__init__.py
+from gym_management import __version__ as version
 
 setup(
-    name="gym_membership",
+    name="gym_management",
     version=version,
-    description="A basic application to manage gym membership",
+    description="A basic application for gym management",
     author="Hasan Raza",
     author_email="razahasan24@gmail.com",
     packages=find_packages(),

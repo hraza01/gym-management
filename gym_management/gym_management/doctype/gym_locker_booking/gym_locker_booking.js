@@ -5,7 +5,7 @@ frappe.ui.form.on("Gym Locker Booking", {
 	refresh(frm) {
     frm.add_custom_button("Fetch Membership", () => {
       frappe.call({
-        method: 'gym_membership.gym_membership.doctype.gym_membership.gym_membership.get_membership_detail',
+        method: 'gym_management.gym_management.doctype.gym_membership.gym_membership.get_membership_detail',
         args: {
           member_id: frm.doc.member_id,
         }
@@ -33,7 +33,7 @@ frappe.ui.form.on("Gym Locker Booking", {
     })
     frm.add_custom_button("Find Available Lockers", () => {
       frappe.call({
-        method: 'gym_membership.gym_membership.doctype.gym_locker_booking.gym_locker_booking.get_available_lockers',
+        method: 'gym_management.gym_management.doctype.gym_locker_booking.gym_locker_booking.get_available_lockers',
         args: {
           start_time: frm.doc.start_time,
           duration: frm.doc.duration

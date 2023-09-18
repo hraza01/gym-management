@@ -7,7 +7,7 @@ frappe.ui.form.on('Gym Workout Plan', {
       'Fetch Membership',
       () => {
       frappe.call({
-        method: 'gym_membership.gym_membership.doctype.gym_membership.gym_membership.get_membership_detail',
+        method: 'gym_management.gym_management.doctype.gym_membership.gym_membership.get_membership_detail',
         args: {
           member_id: frm.doc.member_id,
         }

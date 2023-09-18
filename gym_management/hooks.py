@@ -1,6 +1,6 @@
 from . import __version__ as app_version
 
-app_name = "gym_membership"
+app_name = "gym_management"
 app_title = "Gym Membership"
 app_publisher = "Hasan Raza"
 app_description = "A basic application to manage gym membership"
@@ -11,15 +11,15 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/gym_membership/css/gym_membership.css"
-# app_include_js = "/assets/gym_membership/js/gym_membership.js"
+# app_include_css = "/assets/gym_management/css/gym_management.css"
+# app_include_js = "/assets/gym_management/js/gym_management.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/gym_membership/css/gym_membership.css"
-# web_include_js = "/assets/gym_membership/js/gym_membership.js"
+# web_include_css = "/assets/gym_management/css/gym_management.css"
+# web_include_js = "/assets/gym_management/js/gym_management.js"
 
 # include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "gym_membership/public/scss/website"
+# website_theme_scss = "gym_management/public/scss/website"
 
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
@@ -56,27 +56,27 @@ app_license = "MIT"
 
 # add methods and filters to jinja environment
 # jinja = {
-#	"methods": "gym_membership.utils.jinja_methods",
-#	"filters": "gym_membership.utils.jinja_filters"
+#	"methods": "gym_management.utils.jinja_methods",
+#	"filters": "gym_management.utils.jinja_filters"
 # }
 
 # Installation
 # ------------
 
-# before_install = "gym_membership.install.before_install"
-# after_install = "gym_membership.install.after_install"
+# before_install = "gym_management.install.before_install"
+# after_install = "gym_management.install.after_install"
 
 # Uninstallation
 # ------------
 
-# before_uninstall = "gym_membership.uninstall.before_uninstall"
-# after_uninstall = "gym_membership.uninstall.after_uninstall"
+# before_uninstall = "gym_management.uninstall.before_uninstall"
+# after_uninstall = "gym_management.uninstall.after_uninstall"
 
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
 
-# notification_config = "gym_membership.notifications.get_notification_config"
+# notification_config = "gym_management.notifications.get_notification_config"
 
 # Permissions
 # -----------
@@ -115,39 +115,39 @@ app_license = "MIT"
 
 # scheduler_events = {
 #	"all": [
-#		"gym_membership.tasks.all"
+#		"gym_management.tasks.all"
 #	],
 #	"daily": [
-#		"gym_membership.tasks.daily"
+#		"gym_management.tasks.daily"
 #	],
 #	"hourly": [
-#		"gym_membership.tasks.hourly"
+#		"gym_management.tasks.hourly"
 #	],
 #	"weekly": [
-#		"gym_membership.tasks.weekly"
+#		"gym_management.tasks.weekly"
 #	],
 #	"monthly": [
-#		"gym_membership.tasks.monthly"
+#		"gym_management.tasks.monthly"
 #	],
 # }
 
 # Testing
 # -------
 
-# before_tests = "gym_membership.install.before_tests"
+# before_tests = "gym_management.install.before_tests"
 
 # Overriding Methods
 # ------------------------------
 #
 # override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "gym_membership.event.get_events"
+#	"frappe.desk.doctype.event.event.get_events": "gym_management.event.get_events"
 # }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-#	"Task": "gym_membership.task.get_dashboard_data"
+#	"Task": "gym_management.task.get_dashboard_data"
 # }
 
 # exempt linked doctypes from being automatically cancelled
@@ -161,13 +161,13 @@ app_license = "MIT"
 
 # Request Events
 # ----------------
-# before_request = ["gym_membership.utils.before_request"]
-# after_request = ["gym_membership.utils.after_request"]
+# before_request = ["gym_management.utils.before_request"]
+# after_request = ["gym_management.utils.after_request"]
 
 # Job Events
 # ----------
-# before_job = ["gym_membership.utils.before_job"]
-# after_job = ["gym_membership.utils.after_job"]
+# before_job = ["gym_management.utils.before_job"]
+# after_job = ["gym_management.utils.after_job"]
 
 # User Data Protection
 # --------------------
@@ -197,5 +197,5 @@ app_license = "MIT"
 # --------------------------------
 
 # auth_hooks = [
-#	"gym_membership.auth.validate"
+#	"gym_management.auth.validate"
 # ]
