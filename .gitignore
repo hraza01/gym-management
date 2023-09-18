@@ -4,6 +4,6 @@
 *.swp
 tags
 node_modules
+__pycache__
 .idea
 .vscode
-__pycache__

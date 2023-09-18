@@ -3,7 +3,7 @@
 
 # import frappe
 from frappe.website.website_generator import WebsiteGenerator
-from gym_membership.utils.helpers import get_end_time
+from gym_management.utils.helpers import get_end_time
 import re
 
 

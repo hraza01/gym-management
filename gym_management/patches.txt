@@ -4,4 +4,4 @@
 
 [post_model_sync]
 # Patches added in this section will be executed after doctypes are migrated
-gym_membership.gym_membership.doctype.gym_trainer_subscription.patches.set_status
+gym_management.gym_management.doctype.gym_trainer_subscription.patches.set_status

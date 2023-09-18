@@ -3,7 +3,7 @@
 
 # import frappe
 from frappe.website.website_generator import WebsiteGenerator
-from gym_membership.gym_membership.doctype.gym_workout_plan.gym_workout_plan import get_totals
+from gym_management.gym_management.doctype.gym_workout_plan.gym_workout_plan import get_totals
 import re
 
 

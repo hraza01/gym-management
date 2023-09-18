@@ -1,7 +1,7 @@
-## Gym Membership
+## Gym Management
 
-A basic application to manage gym membership
+A basic application for managing gym operations
 
 #### License
 
-MIT
+mit

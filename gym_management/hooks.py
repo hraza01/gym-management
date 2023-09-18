@@ -1,11 +1,10 @@
-from . import __version__ as app_version
-
 app_name = "gym_management"
-app_title = "Gym Membership"
+app_title = "Gym Management"
 app_publisher = "Hasan Raza"
-app_description = "A basic application to manage gym membership"
+app_description = "A basic application for managing gym operations"
 app_email = "razahasan24@gmail.com"
-app_license = "MIT"
+app_license = "mit"
+# required_apps = []
 
 # Includes in <head>
 # ------------------
@@ -71,6 +70,22 @@ app_license = "MIT"
 
 # before_uninstall = "gym_management.uninstall.before_uninstall"
 # after_uninstall = "gym_management.uninstall.after_uninstall"
+
+# Integration Setup
+# ------------------
+# To set up dependencies/integrations with other apps
+# Name of the app being installed is passed as an argument
+
+# before_app_install = "gym_management.utils.before_app_install"
+# after_app_install = "gym_management.utils.after_app_install"
+
+# Integration Cleanup
+# -------------------
+# To clean up dependencies/integrations with other apps
+# Name of the app being uninstalled is passed as an argument
+
+# before_app_uninstall = "gym_management.utils.before_app_uninstall"
+# after_app_uninstall = "gym_management.utils.after_app_uninstall"
 
 # Desk Notifications
 # ------------------
