@@ -18,16 +18,11 @@ class GymMember(Document):
         """Returns the age given the date of birth"""
         today = dt.date.today()
         dob = get_parsed_date(self.date_of_birth)
-        age = (
-            today.year
-            - dob.year
-            - ((today.month, today.day) < (dob.month, dob.day))
-        )
+        age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
 
         return age
 
     def before_save(self):
-
         dob = get_parsed_date(self.date_of_birth)
 
         if dob.date() > dt.date.today():
@@ -36,6 +31,30 @@ class GymMember(Document):
         self.full_name = self.get_full_name()
         self.age = self.get_age()
 
+    def after_insert(self):
+        create_user(self)
+
 
 def get_parsed_date(date):
     return dt.datetime.strptime(date, "%Y-%m-%d")
+
+
+def create_user(member):
+    doc = frappe.db.exists("User", member.email)
+
+    if doc:
+        user = frappe.get_doc("User", member.email)
+        user.append("roles", {"doctype": "Has Role", "role": "Gym Member"})
+        user.save()
+
+    else:
+        user = frappe.get_doc(
+            {
+                "doctype": "User",
+                "email": member.email,
+                "first_name": member.first_name,
+                "last_name": member.last_name,
+            }
+        )
+        user.append("roles", {"doctype": "Has Role", "role": "Gym Member"})
+        user.insert()

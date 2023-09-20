@@ -7,6 +7,11 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "section_break_cdhl",
+  "email",
+  "column_break_adqp",
+  "phone",
+  "section_break_kekr",
   "first_name",
   "column_break_uuci",
   "last_name",
@@ -18,26 +23,25 @@
   "date_of_birth",
   "column_break_osvp",
   "age",
-  "section_break_cdhl",
-  "email",
-  "column_break_adqp",
-  "phone",
   "section_break_zoay",
   "address"
  ],
  "fields": [
   {
+   "fetch_from": "email.first_name",
    "fieldname": "first_name",
    "fieldtype": "Data",
    "label": "First Name",
    "reqd": 1
   },
   {
+   "fetch_from": "email.last_name",
    "fieldname": "last_name",
    "fieldtype": "Data",
    "label": "Last Name"
   },
   {
+   "fetch_from": "email.full_name",
    "fieldname": "full_name",
    "fieldtype": "Read Only",
    "in_list_view": 1,
@@ -57,16 +61,18 @@
    "fieldtype": "Section Break"
   },
   {
+   "fetch_from": ".gender",
    "fieldname": "gender",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Gender",
-   "options": "Male\nFemale\nOther"
+   "options": "Gender"
   },
   {
    "fieldname": "column_break_aigu",
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": ".birth_date",
    "fieldname": "date_of_birth",
    "fieldtype": "Date",
    "label": "Date of Birth"
@@ -76,6 +82,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": ".",
    "fieldname": "age",
    "fieldtype": "Read Only",
    "label": "Age",
@@ -97,19 +104,25 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "email.phone",
    "fieldname": "phone",
    "fieldtype": "Data",
    "label": "Phone",
-   "reqd": 1
+   "options": "Phone"
   },
   {
    "fieldname": "section_break_zoay",
    "fieldtype": "Section Break"
   },
   {
+   "fetch_from": ".",
    "fieldname": "address",
    "fieldtype": "Data",
    "label": "Address"
+  },
+  {
+   "fieldname": "section_break_kekr",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -135,7 +148,7 @@
    "link_fieldname": "member_id"
   }
  ],
- "modified": "2023-08-29 14:43:18.112496",
+ "modified": "2023-09-20 14:53:33.709440",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Member",
@@ -167,7 +180,6 @@
    "write": 1
   },
   {
-   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -175,8 +187,17 @@
    "report": 1,
    "role": "Gym Member",
    "select": 1,
-   "share": 1,
-   "write": 1
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Trainer",
+   "select": 1,
+   "share": 1
   }
  ],
  "sort_field": "modified",
