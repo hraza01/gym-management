@@ -51,7 +51,7 @@
    "link_fieldname": "locker"
   }
  ],
- "modified": "2023-08-29 21:32:45.089940",
+ "modified": "2023-09-28 11:15:43.129421",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Locker",
@@ -90,8 +90,7 @@
    "report": 1,
    "role": "Gym Member",
    "select": 1,
-   "share": 1,
-   "write": 1
+   "share": 1
   },
   {
    "email": 1,

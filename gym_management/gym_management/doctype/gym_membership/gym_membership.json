@@ -134,7 +134,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-20 13:02:48.968094",
+ "modified": "2023-09-28 11:15:00.940751",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Membership",
@@ -172,6 +172,7 @@
    "read": 1,
    "report": 1,
    "role": "Gym Member",
+   "select": 1,
    "share": 1
   },
   {
@@ -181,6 +182,7 @@
    "read": 1,
    "report": 1,
    "role": "Gym Trainer",
+   "select": 1,
    "share": 1
   }
  ],

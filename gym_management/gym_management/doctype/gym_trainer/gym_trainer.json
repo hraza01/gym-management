@@ -55,7 +55,7 @@
    "link_fieldname": "trainer"
   }
  ],
- "modified": "2023-09-20 13:03:17.070662",
+ "modified": "2023-09-20 17:10:06.450500",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Trainer",
@@ -90,7 +90,6 @@
    "email": 1,
    "export": 1,
    "print": 1,
-   "read": 1,
    "report": 1,
    "role": "Gym Member",
    "select": 1,
@@ -100,7 +99,6 @@
    "email": 1,
    "export": 1,
    "print": 1,
-   "read": 1,
    "report": 1,
    "role": "Gym Trainer",
    "select": 1,

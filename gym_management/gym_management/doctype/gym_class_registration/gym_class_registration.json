@@ -193,7 +193,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-28 21:52:40.063286",
+ "modified": "2023-09-28 10:55:00.738021",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Class Registration",
@@ -227,6 +227,7 @@
    "create": 1,
    "email": 1,
    "export": 1,
+   "if_owner": 1,
    "print": 1,
    "read": 1,
    "report": 1,
@@ -235,7 +236,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "class_type"
 }

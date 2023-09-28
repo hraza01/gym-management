@@ -89,7 +89,7 @@
    "link_fieldname": "gym_plan"
   }
  ],
- "modified": "2023-09-20 13:05:37.202418",
+ "modified": "2023-09-20 17:10:26.761493",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Plan",
@@ -120,15 +120,6 @@
    "select": 1,
    "share": 1,
    "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Gym Member",
-   "share": 1
   }
  ],
  "sort_field": "modified",
