@@ -59,15 +59,22 @@
             <p class="px-2 py-1 text-wrap w-[7rem]">Start Date</p>
             <p class="px-2 py-1 text-wrap w-[7rem]">End Date</p>
           </div>
-          {% for record in memberships %}
-            <div class="flex gap-4 px-2 py-1 border border-transparent hover:border-indigo-500 transition-all duration-150 rounded">
-              <p class="px-2 flex-grow py-1 text-wrap w-[9rem]">{{ record.name }}</p>
-              <p class="px-2 py-1 text-wrap w-[9rem]">{{ record.gym_plan }}</p>
-              <p class="px-2 py-1 text-wrap w-[7rem]">{{ record.plan_fee }}</p>
-              <p class="px-2 py-1 text-wrap w-[7rem]">{{ record.start_date }}</p>
-              <p class="px-2 py-1 text-wrap w-[7rem]">{{ record.end_date }}</p>
-            </div>
-          {% endfor %}
+          {% if memberships %}
+            {% for record in memberships %}
+              <div class="flex gap-4 px-2 py-1 border border-transparent hover:border-indigo-500 transition-all duration-150 rounded">
+                <p class="px-2 flex-grow py-1 text-wrap w-[9rem]">{{ record.name }}</p>
+                <p class="px-2 py-1 text-wrap w-[9rem]">{{ record.gym_plan }}</p>
+                <p class="px-2 py-1 text-wrap w-[7rem]">{{ record.plan_fee }}</p>
+                <p class="px-2 py-1 text-wrap w-[7rem]">{{ record.start_date }}</p>
+                <p class="px-2 py-1 text-wrap w-[7rem]">{{ record.end_date }}</p>
+              </div>
+            {% endfor %}
+
+            {% else %}
+              <div class="mx-auto p-2">
+                No memberships found
+              </div>
+          {% endif %}
         </div>
 
         <!--      Trainer Subscriptions-->
@@ -81,16 +88,25 @@
             <p class="px-2 py-1 text-wrap w-[7rem]">End Date</p>
             <p class="px-2 py-1 text-wrap w-[7rem]">Status</p>
           </div>
-          {% for record in trainer_subscriptions %}
-            <div class="flex gap-4 px-2 py-1 border border-transparent hover:border-blue-500 transition-all duration-150 rounded">
-              <p class="px-2 flex-grow py-1 text-wrap w-[9rem]">{{ record.name }}</p>
-              <p class="px-2 py-1 text-wrap w-[9rem]">{{ frappe.db.get_value('Gym Trainer', record.gym_trainer, 'full_name') }}</p>
-              <p class="px-2 py-1 text-wrap w-[7rem]">{{ record.trainer_fee }}</p>
-              <p class="px-2 py-1 text-wrap w-[7rem]">{{ record.start_date }}</p>
-              <p class="px-2 py-1 text-wrap w-[7rem]">{{ record.end_date }}</p>
-              <p class="px-2 py-1 text-wrap w-[7rem]">{{ record.status }}</p>
-            </div>
-          {% endfor %}
+
+          {% if trainer_subscriptions %}
+            {% for record in trainer_subscriptions %}
+              <div class="flex gap-4 px-2 py-1 border border-transparent hover:border-blue-500 transition-all duration-150 rounded">
+                <p class="px-2 flex-grow py-1 text-wrap w-[9rem]">{{ record.name }}</p>
+                <p class="px-2 py-1 text-wrap w-[9rem]">{{ frappe.db.get_value('Gym Trainer', record.gym_trainer, 'full_name') }}</p>
+                <p class="px-2 py-1 text-wrap w-[7rem]">{{ record.trainer_fee }}</p>
+                <p class="px-2 py-1 text-wrap w-[7rem]">{{ record.start_date }}</p>
+                <p class="px-2 py-1 text-wrap w-[7rem]">{{ record.end_date }}</p>
+                <p class="px-2 py-1 text-wrap w-[7rem]">{{ record.status }}</p>
+              </div>
+            {% endfor %}
+
+            {% else %}
+              <div class="mx-auto p-2">
+                No training record found
+              </div>
+          {% endif %}
+
         </div>
 
       </div>
