@@ -1,0 +1,132 @@
+<!-- jinja -->
+<div>
+  {% if member %}
+
+    <!--    Member Details-->
+    <div class="member-detail">
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Member ID</h5>
+          <p class="card-text">{{ member }}</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Member Name</h5>
+          <p class="card-text">{{ member_detail.full_name }}</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Email</h5>
+          <p class="card-text">{{ member_detail.email }}</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Phone</h5>
+          <p class="card-text">{{ member_detail.phone }}</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Address</h5>
+          <p class="card-text">{{ member_detail.address }}</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Membership Days Remaining</h5>
+          <p class="card-text">{{ membership_remaining_days }}</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Training Days Remaining</h5>
+          <p class="card-text">{{ training_remaining_days }}</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="data-container">
+      <p class="sub-heading">Memberships</p>
+      <table class="table rounded bg-gray-100">
+        {% if memberships %}
+          <thead>
+            <tr>
+              <th scope="col">Membership No</th>
+              <th scope="col">Plan</th>
+              <th scope="col">Plan Fee</th>
+              <th scope="col">Start Date</th>
+              <th scope="col">End Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for record in memberships %}
+              <tr class="table-row rounded">
+                <td>{{ record.name }}</td>
+                <td>{{ record.gym_plan }}</td>
+                <td>{{ record.plan_fee }}</td>
+                <td>{{ record.start_date }}</td>
+                <td>{{ record.end_date }}</td>
+              </tr>
+            {% endfor %}
+
+        {% else %}
+          <tr>
+            No memberships found
+          </tr>
+          {% endif %}
+          </tbody>
+      </table>
+
+      <!--      Trainer Subscriptions-->
+      <p class="sub-heading">Trainer Subscriptions</p>
+      <table class="table rounded bg-gray-100">
+        {% if trainer_subscriptions %}
+          <thead>
+            <tr>
+              <th scope="col">Subscription ID</th>
+              <th scope="col">Trainer</th>
+              <th scope="col">Fee</th>
+              <th scope="col">Start Date</th>
+              <th scope="col">End Date</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for record in trainer_subscriptions %}
+              <tr class="table-row rounded">
+                <td>{{ record.name }}</td>
+                <td>{{ frappe.db.get_value('Gym Trainer', record.gym_trainer, 'full_name') }}</td>
+                <td>{{ record.trainer_fee }}</td>
+                <td>{{ record.start_date }}</td>
+                <td>{{ record.end_date }}</td>
+                <td>{{ record.status }}</td>
+              </tr>
+            {% endfor %}
+
+        {% else %}
+        <tr>
+          No training record found
+        </tr>
+            {% endif %}
+          </tbody>
+      </table>
+    </div>
+
+  {% else %}
+    <div class="row">
+      You are not currently logged in as a gym member.
+    </div>
+
+  {% endif %}
+</div>

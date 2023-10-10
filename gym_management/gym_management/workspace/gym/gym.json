@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"sjiYecYvJr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gym Management</span>\",\"col\":12}},{\"id\":\"PBaBr4g8NH\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"YYoh04ZoAy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Member\",\"col\":3}},{\"id\":\"QO7P3GC4Ck\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Trainer\",\"col\":3}},{\"id\":\"AcFmmAqrSp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Locker\",\"col\":3}},{\"id\":\"V9et5RyfEL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Plan\",\"col\":3}},{\"id\":\"u1aZR_SBwU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Membership\",\"col\":3}},{\"id\":\"5p65xAOOmK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Class\",\"col\":3}},{\"id\":\"dLnUfV1ApI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Workout Template\",\"col\":3}},{\"id\":\"T09PLVKGIB\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"odADz3qYhl\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Gym Resources</b></span>\",\"col\":12}},{\"id\":\"ZYs6y8AYAZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Locker Booking\",\"col\":3}},{\"id\":\"0Q9ggQeEe-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Workout Plan\",\"col\":3}},{\"id\":\"WYp2KKCPD_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Class Booking\",\"col\":3}},{\"id\":\"VRWHUJ538Q\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Member Profile\",\"col\":3}},{\"id\":\"Xux1e3JWXX\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"zTXMbtsn9U\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"nMwrJzipIB\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"id\":\"-wKaPn-Rjk\",\"type\":\"card\",\"data\":{\"card_name\":\"Transactions\",\"col\":4}},{\"id\":\"19bcZRVeJ6\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"73RoD4b1Tn\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}}]",
+ "content": "[{\"id\":\"sjiYecYvJr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gym Management</span>\",\"col\":12}},{\"id\":\"PBaBr4g8NH\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"YYoh04ZoAy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Member\",\"col\":3}},{\"id\":\"QO7P3GC4Ck\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Trainer\",\"col\":3}},{\"id\":\"AcFmmAqrSp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Locker\",\"col\":3}},{\"id\":\"V9et5RyfEL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Plan\",\"col\":3}},{\"id\":\"u1aZR_SBwU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Membership\",\"col\":3}},{\"id\":\"5p65xAOOmK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Class\",\"col\":3}},{\"id\":\"dLnUfV1ApI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Workout Template\",\"col\":3}},{\"id\":\"T09PLVKGIB\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"odADz3qYhl\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Gym Resources</b></span>\",\"col\":12}},{\"id\":\"ZYs6y8AYAZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Locker Booking\",\"col\":3}},{\"id\":\"0Q9ggQeEe-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Workout Plan\",\"col\":3}},{\"id\":\"WYp2KKCPD_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Class Booking\",\"col\":3}},{\"id\":\"VRWHUJ538Q\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Member Profile\",\"col\":3}},{\"id\":\"Xux1e3JWXX\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"zTXMbtsn9U\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"nMwrJzipIB\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"id\":\"-wKaPn-Rjk\",\"type\":\"card\",\"data\":{\"card_name\":\"Transactions\",\"col\":4}},{\"id\":\"19bcZRVeJ6\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"73RoD4b1Tn\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"sM-9n6xXJS\",\"type\":\"card\",\"data\":{\"card_name\":\"Portal\",\"col\":4}}]",
  "creation": "2023-09-18 13:46:07.772395",
  "custom_blocks": [],
  "docstatus": 0,
@@ -203,9 +203,27 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Portal",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Member Profile",
+   "link_count": 0,
+   "link_to": "gym-member-profile",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-09-28 12:09:39.662593",
+ "modified": "2023-10-10 09:55:15.827924",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym",
