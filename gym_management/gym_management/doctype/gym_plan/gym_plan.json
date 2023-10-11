@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
+ "autoname": "format:{plan_type}-{currency}-{plan_fee}",
  "creation": "2023-07-12 17:44:58.038261",
  "default_view": "List",
  "doctype": "DocType",
@@ -12,6 +12,8 @@
   "column_break_nfyo",
   "section_break_zlck",
   "column_break_bdrl",
+  "plan_name",
+  "column_break_vaow",
   "plan_fee",
   "column_break_yjjx",
   "plan_type",
@@ -24,6 +26,7 @@
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Plan Fee",
+   "non_negative": 1,
    "options": "currency",
    "precision": "2",
    "reqd": 1
@@ -51,9 +54,13 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "MONTHLY",
    "fieldname": "plan_type",
-   "fieldtype": "Data",
-   "label": "Plan Type"
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Plan Type",
+   "options": "MONTHLY\nYEARLY",
+   "reqd": 1
   },
   {
    "default": "USD",
@@ -66,6 +73,15 @@
   {
    "fieldname": "column_break_nfyo",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "label": "Plan Name"
+  },
+  {
+   "fieldname": "column_break_vaow",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -75,11 +91,11 @@
    "link_fieldname": "gym_plan"
   }
  ],
- "modified": "2023-08-28 21:42:27.146074",
+ "modified": "2023-10-11 12:53:54.432883",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Plan",
- "naming_rule": "Set by user",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -108,7 +124,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "plan_name"
 }

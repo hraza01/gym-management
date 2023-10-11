@@ -10,6 +10,11 @@
   "column_break_mljn",
   "column_break_oicb",
   "amended_from",
+  "section_break_edvd",
+  "column_break_ffmj",
+  "column_break_qebw",
+  "column_break_ezzr",
+  "status",
   "gym_member_details_section",
   "gym_member",
   "column_break_sdlf",
@@ -60,6 +65,7 @@
    "in_list_view": 1,
    "label": "Plan Name",
    "options": "Gym Plan",
+   "reqd": 1,
    "search_index": 1
   },
   {
@@ -129,12 +135,36 @@
    "fieldtype": "Data",
    "label": "Plan Fee",
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_edvd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ffmj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qebw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ezzr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nScheduled\nExpired",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-29 15:38:56.742647",
+ "modified": "2023-10-11 13:19:55.077921",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Membership",
@@ -172,11 +202,24 @@
    "read": 1,
    "report": 1,
    "role": "Gym Member",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Trainer",
+   "select": 1,
    "share": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "gym_member",
  "track_changes": 1
 }

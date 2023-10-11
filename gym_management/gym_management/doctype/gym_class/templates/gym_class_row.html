@@ -1,4 +1,5 @@
 {% set count = frappe.db.count('Gym Class Registration', filters={'gym_class_id': doc.name}) %}
+{% set member_id = frappe.db.get_value('Gym Member', {"email": frappe.session.user}, "name") %}
 
 <div class="p-4">
   <div class="card" style="width: 20rem;">
@@ -8,7 +9,7 @@
       <p class="card-text">{{ doc.start_time.strftime('%d %b, %Y | %H:%M') }} | {{ doc.duration }} Minutes</p>
       <div class="flex align-items-center">
         <p class="m-0 mr-4">Currently Enrolled: {{ count }}</p>
-        <a href="/new-class-registration/new?gym_class_id={{doc.name}}" class="btn btn-primary ml-auto">Enroll</a>
+        <a href="/new-class-registration/new?gym_class_id={{ doc.name }}&member_id={{ member_id }}" class="btn btn-primary ml-auto">Enroll</a>
       </div>
     </div>
   </div>

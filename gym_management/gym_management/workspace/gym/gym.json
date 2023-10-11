@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"sjiYecYvJr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gym</span>\",\"col\":12}},{\"id\":\"YYoh04ZoAy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Member\",\"col\":3}},{\"id\":\"QO7P3GC4Ck\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Trainer\",\"col\":3}},{\"id\":\"AcFmmAqrSp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Locker\",\"col\":3}},{\"id\":\"V9et5RyfEL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Plan\",\"col\":3}},{\"id\":\"u1aZR_SBwU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Membership\",\"col\":3}},{\"id\":\"5p65xAOOmK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Class\",\"col\":3}},{\"id\":\"0Q9ggQeEe-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Workout Plan\",\"col\":3}},{\"id\":\"dLnUfV1ApI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Workout Template\",\"col\":3}},{\"id\":\"T09PLVKGIB\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"zTXMbtsn9U\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"nMwrJzipIB\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"id\":\"-wKaPn-Rjk\",\"type\":\"card\",\"data\":{\"card_name\":\"Transactions\",\"col\":4}},{\"id\":\"19bcZRVeJ6\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"73RoD4b1Tn\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}}]",
+ "content": "[{\"id\":\"sjiYecYvJr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gym Management</span>\",\"col\":12}},{\"id\":\"XA2LEHmzg1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Members\",\"col\":4}},{\"id\":\"ybYXPjCblC\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Memberships\",\"col\":4}},{\"id\":\"Hyjy5Tjcg0\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Trainers\",\"col\":4}},{\"id\":\"PBaBr4g8NH\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"YYoh04ZoAy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Member\",\"col\":3}},{\"id\":\"QO7P3GC4Ck\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Trainer\",\"col\":3}},{\"id\":\"AcFmmAqrSp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Locker\",\"col\":3}},{\"id\":\"V9et5RyfEL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Plan\",\"col\":3}},{\"id\":\"u1aZR_SBwU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Membership\",\"col\":3}},{\"id\":\"5p65xAOOmK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Class\",\"col\":3}},{\"id\":\"dLnUfV1ApI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Workout Template\",\"col\":3}},{\"id\":\"T09PLVKGIB\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"odADz3qYhl\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Gym Resources</b></span>\",\"col\":12}},{\"id\":\"ZYs6y8AYAZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Locker Booking\",\"col\":3}},{\"id\":\"0Q9ggQeEe-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Workout Plan\",\"col\":3}},{\"id\":\"WYp2KKCPD_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Class Booking\",\"col\":3}},{\"id\":\"VRWHUJ538Q\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Member Profile\",\"col\":3}},{\"id\":\"Xux1e3JWXX\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"zTXMbtsn9U\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"nMwrJzipIB\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"id\":\"-wKaPn-Rjk\",\"type\":\"card\",\"data\":{\"card_name\":\"Transactions\",\"col\":4}},{\"id\":\"19bcZRVeJ6\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"73RoD4b1Tn\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"sM-9n6xXJS\",\"type\":\"card\",\"data\":{\"card_name\":\"Portal\",\"col\":4}}]",
  "creation": "2023-09-18 13:46:07.772395",
  "custom_blocks": [],
  "docstatus": 0,
@@ -82,7 +82,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Masters",
-   "link_count": 5,
+   "link_count": 6,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -139,8 +139,18 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Workout Plan Templates",
+   "link_count": 0,
+   "link_to": "Gym Workout Plan Template",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Transactions",
-   "link_count": 6,
+   "link_count": 5,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -197,19 +207,40 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Workout Plan Templates",
+   "label": "Portal",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Member Profile",
    "link_count": 0,
-   "link_to": "Gym Workout Plan Template",
-   "link_type": "DocType",
+   "link_to": "gym-member-profile",
+   "link_type": "Page",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2023-09-18 14:41:21.552373",
+ "modified": "2023-10-11 13:19:08.517151",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym",
- "number_cards": [],
+ "number_cards": [
+  {
+   "label": "Total Members",
+   "number_card_name": "Total Members"
+  },
+  {
+   "label": "Total Memberships",
+   "number_card_name": "Total Memberships"
+  },
+  {
+   "label": "Total Trainers",
+   "number_card_name": "Total Trainers"
+  }
+ ],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
@@ -220,7 +251,21 @@
   {
    "color": "Grey",
    "doc_view": "New",
-   "label": "Create Workout Plan",
+   "label": "New Locker Booking",
+   "link_to": "Gym Locker Booking",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Member Profile",
+   "type": "URL",
+   "url": "http://development.localhost:8000/member-profile"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Workout Plan",
    "link_to": "Gym Workout Plan",
    "type": "DocType"
   },
@@ -236,6 +281,13 @@
    "doc_view": "New",
    "label": "Create Member",
    "link_to": "Gym Member",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Class Booking",
+   "link_to": "Gym Class Registration",
    "type": "DocType"
   },
   {
