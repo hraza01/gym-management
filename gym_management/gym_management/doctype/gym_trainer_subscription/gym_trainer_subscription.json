@@ -181,6 +181,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "default": "To Review",
    "fieldname": "status",
    "fieldtype": "Select",
@@ -197,7 +198,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-20 13:04:45.317519",
+ "modified": "2023-10-11 12:55:27.604649",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Trainer Subscription",

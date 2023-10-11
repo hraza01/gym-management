@@ -151,7 +151,6 @@
    "in_list_view": 1,
    "label": "Membership No",
    "options": "Gym Membership",
-   "read_only": 1,
    "reqd": 1
   },
   {
@@ -271,7 +270,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-20 12:58:22.208370",
+ "modified": "2023-10-11 12:21:15.506043",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Workout Plan",

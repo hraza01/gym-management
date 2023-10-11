@@ -3,37 +3,20 @@
 
 frappe.ui.form.on('Gym Workout Plan', {
   refresh(frm) {
-    frm.add_custom_button(
-      'Fetch Membership',
-      () => {
-      frappe.call({
-        method: 'gym_management.gym_management.doctype.gym_membership.gym_membership.get_membership_detail',
-        args: {
-          member_id: frm.doc.member_id,
-        }
-      }).then(res => {
-        let dialog = new frappe.ui.Dialog({
-          title: 'Fetch Membership',
-          fields: [
-            {
-              fieldtype: 'Select',
-              fieldname: 'membership_no',
-              label: 'Membership No',
-              options: res.message.map(r => r.name)
-            },
-          ],
-          primary_action_label: 'Select',
-          primary_action: (data) => {
-            let {membership_no} = data
-            frm.set_value('membership_no', membership_no)
-            dialog.hide()
-          }
-        })
-
-        dialog.show()
-      })
-    })
   },
+
+  member_id: function(frm) {
+    console.log(frm.doc.member_id)
+
+    frm.set_query("membership_no", () => {
+      return {
+        filters: {
+          "gym_member": ["=", frm.doc.member_id],
+        },
+      };
+    });
+  },
+
   workout_plan_template(frm) {
     frappe.db.get_doc(
       'Gym Workout Plan Template',
