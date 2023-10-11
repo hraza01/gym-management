@@ -1,6 +1,7 @@
 {
  "actions": [],
- "autoname": "format:GP-{plan_type}-{plan_fee}-{currency}",
+ "allow_rename": 1,
+ "autoname": "format:{plan_type}-{currency}-{plan_fee}",
  "creation": "2023-07-12 17:44:58.038261",
  "default_view": "List",
  "doctype": "DocType",
@@ -25,6 +26,7 @@
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Plan Fee",
+   "non_negative": 1,
    "options": "currency",
    "precision": "2",
    "reqd": 1
@@ -52,12 +54,12 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "Monthly",
+   "default": "MONTHLY",
    "fieldname": "plan_type",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Plan Type",
-   "options": "Monthly\nQuarterly\nYearly",
+   "options": "MONTHLY\nYEARLY",
    "reqd": 1
   },
   {
@@ -89,7 +91,7 @@
    "link_fieldname": "gym_plan"
   }
  ],
- "modified": "2023-09-20 17:10:26.761493",
+ "modified": "2023-10-11 12:53:54.432883",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Plan",
@@ -122,7 +124,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "plan_name"
 }
